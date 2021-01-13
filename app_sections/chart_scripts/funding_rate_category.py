@@ -67,11 +67,11 @@ def funding_rate_category(funding):
 
 
 
-    points_ = (alt.Chart(funding, width=300, height=150,
+    points_ = (alt.Chart(funding, width=200, height=150,
                          title=''
                         )
      .mark_point(filled=True,
-                 size=1000
+                 size=700
 
                 )
      .encode(
