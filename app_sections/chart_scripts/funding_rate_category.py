@@ -14,7 +14,7 @@ def funding_rate_category(funding):
     minimal_axis = alt.Axis(grid=False, ticks=False,labels=False)
 
     base = (
-        alt.Chart(funding, width=300, height=420, title='')
+        alt.Chart(funding, width=250, height=420, title='')
         .mark_bar()
         .encode(
             x=alt.X('funded_rate:Q', title='',axis=None),
@@ -79,7 +79,8 @@ def funding_rate_category(funding):
                  axis=alt.Axis(grid=False,
                                title='Median project cost (by category)',
                                format='$.0f',
-                               tickCount=1)),
+                               tickCount=1),
+                               ),
 
          y=alt.Y('funded_rate:Q',
                  axis=alt.Axis(grid=False,
