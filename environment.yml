@@ -1,0 +1,12 @@
+name: donorschoose-dashboard
+channels:
+  - conda-forge
+dependencies:
+  - pandas
+  - pip
+  - streamlit
+  - plotly
+  - python-dotenv
+  - boto3
+  - altair
+  - fsspec
