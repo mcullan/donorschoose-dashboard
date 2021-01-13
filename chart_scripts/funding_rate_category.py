@@ -11,10 +11,11 @@ def funding_rate_category(funding):
     #funding=pd.read_csv(f'{data_directory}/funding.csv', index_col=0)
     #funding = filepath
 
+    chart_height = 40*funding.shape[0]
     minimal_axis = alt.Axis(grid=False, ticks=False,labels=False)
 
     base = (
-        alt.Chart(funding, width=270, height=420, title='')
+        alt.Chart(funding, width=270, height=chart_height, title='')
         .mark_bar()
         .encode(
             x=alt.X('funded_rate:Q', title='',axis=None),
@@ -72,7 +73,6 @@ def funding_rate_category(funding):
                         )
      .mark_point(filled=True,
                  size=400
-
                 )
      .encode(
          x=alt.X('median:Q',
@@ -131,7 +131,7 @@ def funding_rate_category(funding):
 
 
 
-    out  =  prop_funded_category | ((points  ) & (text_category + text_median + text_rate) )
+    out  =  prop_funded_category  & ((text_category + text_median + text_rate) & (points) )
 
 
 

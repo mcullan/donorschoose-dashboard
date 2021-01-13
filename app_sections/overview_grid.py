@@ -66,29 +66,23 @@ def app():
         ###### COLUMN 1: Donations
         with c1_1:
             st.markdown('### Donations')
-        with c2_1:
             st.markdown('#### Number of Donations')
             display_grid_val(row, 'num_donations')
-        with c3_1:
             st.markdown('#### With Contribution')
             display_grid_val(row, 'with_additional')
         ###### COLUMN 2: Projects
         with c1_2:
             st.markdown('### Projects')
-        with c2_2:
             st.markdown('#### Number of Projects')
             display_grid_val(row, 'number_of_projects')
-        with c3_2:
             st.markdown('#### Successfully Funded')
             display_grid_val(row, 'success_rate')
 
         ###### COLUMN 3: Donors
         with c1_3:
             st.markdown('### Donors')
-        with c2_3:
             st.markdown('#### Total Donors')
             display_grid_val(row, 'unique_donors')
-        with c3_3:
             st.markdown('#### New Donors')
             display_grid_val(row, 'new_donors')
 
@@ -96,11 +90,9 @@ def app():
         with c1_4:
             st.markdown('### Schools')
 
-        with c2_4:
             st.markdown('#### Total Schools')
             display_grid_val(row, 'num_schools')
 
-        with c3_4:
             st.markdown('#### New Schools')
             display_grid_val(row, 'proportion_schools_new')
 
