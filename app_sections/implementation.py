@@ -6,7 +6,7 @@ def app():
 ## Dashboard Implementation
 
 ### Streamlit
-This dashboard was built using [Streamlit](streamlit.io). I chose Streamlit over something like [Flask](flask.com) for simplicity and quick delivery.
+This dashboard was built using **Streamlit**. I chose Streamlit over something like Flask for simplicity and quick delivery.
 
 With Streamlit, we have:
 * The ability to run any Python code server-side
@@ -22,10 +22,10 @@ The Heroku app tracks a GitHub repository, and automatically builds after commit
 ### Visualizations
 
 #### Optional Contributions Chart: Plot.ly
-This plot, technically a *Sankey Chart*, was made using [Plotly](plot.ly). Lots of great things to say about this software. Ploty provides multiple interfaces for creating charts. If you need a standard chart and not much customization, you can use **Plotly express**. For complicated things (like this chart), they provide the *Graph Objects* interface.
+This plot, technically a *Sankey Chart*, was made using **Plot.ly**. Lots of great things to say about this software. Plot.ly provides multiple interfaces for creating charts. If you need a standard chart and not much customization, you can use **Plotly express**. For complicated things (like this chart), they provide the *Graph Objects* interface.
 
 #### Everything else: Altair
-Most of the plots herein are made with [Altair](altair-viz.github.io). Altair is actually a Python wrapper for Vega-Lite, a JSON specification for data visualizations.
+Most of the plots herein are made with **Altair**. Altair is actually a Python wrapper for Vega-Lite, a JSON specification for data visualizations.
 
 Altair/Vega-Lite provide, in my experience, the easiest approach to linking selections across charts. That's something we see in the **Project Analysis** chart. As you mouse-over the bar chart, points are highlighted in the scatter chart and text is displayed in the bottom corner.
 

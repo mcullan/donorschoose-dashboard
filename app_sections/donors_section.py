@@ -311,7 +311,11 @@ Mouse over the plots below to view the percentiles of donors according to number
     count_percentiles = pd.read_csv(f"{data_directory}/count_percentiles.csv")
     donation_percentiles = pd.read_csv(f"{data_directory}/donation-percentiles.csv")
 
-    st.altair_chart(count_percentile_chart(count_percentiles) | donation_percentile_chart(donation_percentiles))
+    ch1, ch2 = st.beta_columns((1,1))
+    with ch1:
+        st.altair_chart(count_percentile_chart(count_percentiles))
+    with ch2:
+        st.altair_chart(donation_percentile_chart(donation_percentiles))
 
     st.markdown('''
 It turns out that 72% of our donors have only donated once!
