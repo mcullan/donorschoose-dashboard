@@ -12,6 +12,33 @@ import boto3
 load_dotenv()
 
 def app():
+    st.markdown(""" ## Overview
+Fundraising projects have expiration dates, and we want to drive donations for "at-risk" projects that are nearing expiration. We'll do this by promoting these projects to donors or prospects who are likely to support them. This tool simulates a weekly process: every Friday, the application generates a list of currently-live, at-risk projects, as well as a list of candidate donors for each. Read more, or try it for yourself:""")
+
+    ex_1 = st.beta_expander('At-risk projects')
+    with ex_1:
+        st.markdown("""Currently, I'm using a simple assumption and rule. I'm just showing the 10 projects with the highest remaining cost for the selected region and time window. The next step would be to develop a machine learning model. We don't want the least likely projects to get funding - we want those that have funding potential but lack visibility.
+
+In other words, we would need a model with features drawn from engagement data, not just transactional data.""")
+
+    ex_2 = st.beta_expander('Potential donors')
+    with ex_2:
+        st.markdown("""I'm using another very simple rule here, currently. I'm making the assumption that someone could be encouraged to donate to a school they've already given to. This doesn't do much for schools that are struggling to gain traction. Instead, it's a stand-in where we might want to bring in another machine learning model.
+
+The baseline is in finding donors who could be convinced to donate somewhere *new*, a school they aren't directly connected to.
+
+From there, we might have a more specific model, more akin to a recommendation system, that picks a few projects for each of these donors. Or we may have a placeholder rule that keeps to local schools/projects or similar.""")
+
+    ex_3 = st.beta_expander("How to use outputs")
+    with ex_3:
+            st.markdown(""" Currently, the tool can return a table of donor information for a given project. Realistically, we would want to integrate with out email automation platform, and this would be an easy place to put an API call.
+
+This may look like the following: we have some list of prospects signed up for a weekly campaign highlighting at-risk projects. We select a baseline group of projects using the first rule mentioned above. Then, for each donor (or group of donors), we determine e.g. the top three projects they're the most likely to support.
+
+From there, we can push these project IDs to the donor/cohort profiles, where they can be referenced in a campaign to serve personalized content. I've done this sort of thing with Pardot before, and from what I can tell, it's pretty straightforward to do this with similar platforms.
+    """)
+
+    st.markdown("## Interactive Tool")
     col_1, col_2, col_3= st.beta_columns((1,1,1))
     with col_1:
         week_box = st.selectbox(
