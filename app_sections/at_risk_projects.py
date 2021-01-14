@@ -31,7 +31,7 @@ From there, we might have a more specific model, more akin to a recommendation s
 
     ex_3 = st.beta_expander("How to use outputs")
     with ex_3:
-            st.markdown(""" Currently, the tool can return a table of donor information for a given project. Realistically, we would want to integrate with out email automation platform, and this would be an easy place to put an API call.
+            st.markdown(""" Currently, the tool can return a table of donor information for a given project. Realistically, we would want to integrate with our email automation platform, and this would be an easy place to put an API call.
 
 This may look like the following: we have some list of prospects signed up for a weekly campaign highlighting at-risk projects. We select a baseline group of projects using the first rule mentioned above. Then, for each donor (or group of donors), we determine e.g. the top three projects they're the most likely to support.
 
