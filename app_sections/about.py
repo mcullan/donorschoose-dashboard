@@ -38,7 +38,7 @@ This **marketing dashboard** tracks metrics, identify areas that need attention,
 """
 
     note_data = """#### The Data
-The organization published an historical (2013-2018) data set on Kaggle, comprising  Donations, Unique donors, Projects, Schools, Teachers. Examples can be found on the **Data Source** page."""
+The organization published an historical (2013-2018) data set on Kaggle, comprising  Donations, Unique donors, Projects, Schools, Teachers."""
 
 
     st.markdown("## Overview")
